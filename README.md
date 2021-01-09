@@ -17,8 +17,10 @@ sudo docker image build -t pythonwebapp .
 sudo docker run -p 5000:5000 -d pythonwebapp
 
 [ sudo docker ps
+
   curl 0.0.0.0:5000
-  # you should get the status
+
+# you should get the status
 ]
 
 #Now push it GCR
@@ -26,6 +28,7 @@ sudo docker run -p 5000:5000 -d pythonwebapp
 sudo docker tag pythonwebapp gcr.io/PROJECT_ID/pythonwebapp
 
 (MAKE SURE YOUR VM HAS PROPER ACCESS TO GCR  Ex:ServiceAccounts)
+
 ( Follow this for authentication issues :  "https://cloud.google.com/container-registry/docs/advanced-authentication#linux-macos_1")
 
 sudo docker push gcr.io/PROJECT_ID/pythonwebapp:latest
