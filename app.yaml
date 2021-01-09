@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-tutorial
+  labels:
+    name: flask-app-tutorial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: flask-app-tutorial
+  template:
+    metadata:
+      name: flask-app-tutorial
+      labels:
+        name: flask-app-tutorial
+    spec:
+      containers:
+        - name: flask-app-tutorial
+          image: <GCR IMAGE LINK>
+          ports:
+            - containerPort: 5000
+          env:
+            - name: DEBUG_MODE
+              value: "1"
