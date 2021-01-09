@@ -1,8 +1,11 @@
 # containerizeapp
 
 step1: Basically, here we will take one sample python Flask web app
+
 step2: We will containerize that web app using Docker
+
 Step3: We will push that docker image to Google Container Registry
+
 Step4: Then we will deploy that image in Google Kubernetes Engine
 
 #Commands
